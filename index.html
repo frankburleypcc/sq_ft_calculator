@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Sq Ft Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function calculate() {
+            var length = Number(document.getElementById("length").value);
+            var width = Number(document.getElementById("width").value);
+            var area = length * width;
+            document.getElementById("results").innerHTML = area + " Square Feet";
+        }
+        //this function resets the form instead of a page refresh
+        function resetCalc() {
+            document.getElementById("length").value = "";
+            document.getElementById("width").value = "";
+            document.getElementById("results").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        
+        <h1>Flooring Square Foot Calculator</h1>
+        
+        <table>
+            <tr>
+                <th>Length</th>
+                <td><input type="text" id="length" placeholder="Enter Feet Number"></td>
+            </tr>
+            <tr>
+                <th>Width</th>
+                <td><input type="text" id="width" placeholder="Enter Feet Number"></td>
+            </tr>
+            <tr>
+                <th>Area</th>
+                <td><span id="results"></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="text-align: center">
+                    <input type="button" value="Calculate" onclick="calculate();">
+                    <input type="button" onclick="resetCalc();" value="Reset">
+                </td>
+            </tr>
+        </table>
+        
+        <img src="images/kitchen.jpg">
+        
+    </div>
+
+</body>
+</html>
